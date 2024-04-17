@@ -1,15 +1,16 @@
-const App = () =>{
+import Hello from "./components/hello";
+const App = () => {
 
-  //console.log('Hello World');
+  return(
 
-  const now = new Date();
-return(
-<div>
- <h1>Hello World</h1>
- <p>It is Now {now.toString()}</p>
-  </div>
- 
-)
+    <div>
+      <h1>Greeting</h1>
+      <Hello name="GAIUAH" />
+      <Hello name="GAIUAH" />
+
+      <Hello name="GAIUAH" />
+    </div>
+  )
 }
 
 export default App;
