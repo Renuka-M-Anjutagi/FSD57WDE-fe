@@ -48,7 +48,7 @@ const App = () => {
       id:1,
       price:'$40.00 - $80.00',
       title:'Fancy Product',
-      image:'src/assets/6c757d.jpg',
+      image:'../src/assets/6c757d.jpg',
       description:'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
     },
     {
