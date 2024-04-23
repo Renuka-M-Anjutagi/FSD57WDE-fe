@@ -1,20 +1,29 @@
-import Card from "./components/Card";
-import Note from "./components/Note";
+import React from 'react';
+import CardNew from "./components/CardNew";
+import { useState } from 'react';
 
 const App = () => {
+ 
+  const [counter, setCounter] = useState(0);
 
+   
   const divStyle = {
   
-    backgroundColor:'white',
+    backgroundColor:'#F8F9FA',
     textAlign: 'center',
-    margin: '20px',
-    padding:'40px',
-   
-  
+    
+  }
+  const divBanner = {
+    backgroundColor:'#212529',
+    height:'300px',
+    width:'100%',
+    color:'white',
+    padding:'100px',
+    
   }
   const innerdivStyle = {
   
-    backgroundColor:'blue',
+    backgroundColor:'white',
     height:'auto',
     width:'auto',
     textAlign: 'center',
@@ -31,77 +40,79 @@ const App = () => {
     
   
    }
-
+ const cartbox1 = {
+  float:'right'
+ }
    const data = [
     {
-      price:0,
-      title:'FREE',
-    },
-    {
-      price:9,
-      title:'POST',
-    },
-    {
-      price:49,
-      title:'PRO',
-    },
-  ]
-  const notes = [
-    {
-      id:0,
-      content:'Single User',
-      important:'true'
-    },
-    {
       id:1,
-      content:'5 Users',
-      important:'true'
+      price:'$40.00 - $80.00',
+      title:'Fancy Product',
+      image:'src/assets/6c757d.jpg',
+      description:'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
+    },
+    {
+      id:2,
+      price:'$20.00 $18.00',
+      title:'Special Item',
+      description:'This card has supporting text below as a natural lead-in to additional content.'
     },
     {
       id:3,
-      content:'Unlimitted Public Project',
-      important:'true'
+      price:'$50.00 $25.00',
+      title:'Sale Item',
+      description:'This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.'
     },
     {
-        id:4,
-        content:'Community Access',
-        important:'true'
+      id:4,
+      price:'$40.00',
+      title:'Popular Item',
+      description:'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
     },
-    {
-        id:5,
-        content:'Unlimitted Private Project',
-        important:'true'
-      },
-      {
-        id:6,
-        content:'Dedicated Phone Support',
-        important:'true'
-      },
-      {
-        id:7,
-        content:'Free Subdomain',
-        important:'false'
-      },
-      {
-        id:8,
-        content:'Monthly Status Report',
-        important:'false'
-      },
   ]
+  
 
    
   return(
 <div style={divStyle}>  
-<h1>React Price Card Task</h1>
-<p>Reproduce this user interface using a React.js application with JSX. Write the code in a dynamic manner.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Start Boostrap </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Shop 
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"></a>
+          <a class="dropdown-item" href="#"></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"></a>
+        </div>
+      </li>
+    
+    </ul>
+    <p style={cartbox1}> Cart-Item  - {counter}</p> 
+  
+  </div>
+</nav>
+<div style={divBanner}><h1>Shop in style</h1>
+<p>With this shop hompeage template</p></div>
       <div style={innerdivStyle}>
-      
+        
         <div style={styles}>
-          <Card notes={notes} title={data[0].title} price = {data[0].price}/>
-          <Card notes={notes} title={data[1].title}  price = {data[1].price}/>
-          <Card notes={notes}  title={data[2].title}  price = {data[2].price}/>
-
+          <CardNew data={data} title={data[0].title} price = {data[0].price}  description = {data[0].description} image = {data[0].image}/>
+         
         </div>
       </div>
      
