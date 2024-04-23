@@ -55,18 +55,21 @@ const App = () => {
       id:2,
       price:'$20.00 $18.00',
       title:'Special Item',
+       image:'src/assets/6c757d.jpg',
       description:'This card has supporting text below as a natural lead-in to additional content.'
     },
     {
       id:3,
       price:'$50.00 $25.00',
       title:'Sale Item',
+       image:'src/assets/6c757d.jpg',
       description:'This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.'
     },
     {
       id:4,
       price:'$40.00',
       title:'Popular Item',
+       image:'src/assets/6c757d.jpg',
       description:'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'
     },
   ]
