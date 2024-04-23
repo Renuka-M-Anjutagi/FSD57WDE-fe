@@ -1,7 +1,7 @@
 
 .card{
-    width: 'auto';
-    height: 'auto';
+    width:fit-content;
+    height: auto;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -9,7 +9,7 @@
 }
 .card-header{
 
-    width: 100%;
+    width:fit-content;
 }
 .btn{
     width: 100%;
